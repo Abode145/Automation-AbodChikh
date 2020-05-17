@@ -1,13 +1,21 @@
 /// <reference types="cypress" />
 
+import * as targets from '../target/targets'
+import * as loginP from '../pages/loginPage'
 
 //Test suite
-describe("Resgression test suite", function(){
+describe("PO - regression test suite", function(){
+
+    beforeEach(() =>{
+        cy.visit(targets.url)
+        //loginP.checkLoginPageTitle()
+    })
 
     //Test case
-    it("Test case 1", function(){
-        cy.visit("http://localhost:3000")
-
+    it("TC - Valid Login", function(){
+        
+        loginP.performLogin(cy)
+        
     })
 
 })
