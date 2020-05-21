@@ -7,6 +7,8 @@ import * as roomsPage from '../pages/roomsPage'
 import * as clientsPage from '../pages/clientsPage'
 import * as billsPage from '../pages/billsPage'
 import * as reservationsPage from '../pages/reservationsPage'
+import faker from 'faker'
+
 
 //Test suite
 describe("PO - regression test suite", function(){
@@ -61,7 +63,8 @@ describe("PO - regression test suite", function(){
         mainPage.CheckMainPage(cy)
         mainPage.gotoRoomsPage(cy) //Assertions sker innuti funktionen
         roomsPage.gotoeditFirstRoom(cy) //Assertions sker innuti funktionen
-        roomsPage.changePriceAndSave(cy, '350') //Assertion sker innuti. oavsett om man sätter in 0 eller en valid siffra
+        let randomPrice = faker.random.number()
+        roomsPage.changePriceAndSave(cy, randomPrice) //Assertion sker innuti. oavsett om man sätter in 0 eller en valid siffra
         mainPage.performLogout(cy)
         loginPage.checkLoginPage(cy)
     })
@@ -71,7 +74,9 @@ describe("PO - regression test suite", function(){
         mainPage.CheckMainPage(cy)
         mainPage.gotoRoomsPage(cy) //Assertions sker innuti funktionen
         roomsPage.gotoeditFirstRoom(cy) //Assertions sker innuti funktionen
-        roomsPage.changeRoomAndFloor(cy, '15', '1536') //Assertion sker innuti. oavsett parameter
+        let floorNumber = faker.random.number()
+        let roomNumber = faker.random.number()
+        roomsPage.changeRoomAndFloor(cy, floorNumber, roomNumber) //Assertion sker innuti. oavsett parameter
         mainPage.performLogout(cy)
         loginPage.checkLoginPage(cy)
     })
@@ -80,7 +85,11 @@ describe("PO - regression test suite", function(){
         loginPage.performLogin(cy)
         mainPage.CheckMainPage(cy)
         mainPage.gotoClientsPage(cy) //assertions sker innuti funktionen
-        clientsPage.createNewClient(cy, 'Abode Chikh', 'Abode.chikh@hotmail.com', '0736526336') //Assertions sker innuti oavsett inmattning i parameterna.
+        let firstName = faker.name.firstName()
+        let lastName = faker.name.lastName()
+        let email = faker.internet.email()
+        let telephoneNumber = faker.phone.phoneNumber()
+        clientsPage.createNewClient(cy, firstName + ' ' + lastName, email, telephoneNumber) //Assertions sker innuti oavsett inmattning i parameterna.
         mainPage.performLogout(cy)
         loginPage.checkLoginPage(cy)
     })
