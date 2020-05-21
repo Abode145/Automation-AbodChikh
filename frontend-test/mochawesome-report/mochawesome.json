@@ -1,0 +1,195 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-21T15:40:18.873Z",
+    "end": "2020-05-21T15:40:34.036Z",
+    "duration": 15163,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3eabffa8-c4af-4664-bbce-9f2eb1845eca",
+      "title": "",
+      "fullFile": "cypress/integration/test-suite.spec.js",
+      "file": "cypress/integration/test-suite.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "579a6c1a-7509-4602-b5e2-4e6b910c92f2",
+          "title": "PO - regression test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC - Valid Login",
+              "fullTitle": "PO - regression test suite TC - Valid Login",
+              "timedOut": null,
+              "duration": 1908,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.performLogin(cy);\nmainPage.CheckMainPage(cy);\nmainPage.performLogout(cy);\nloginPage.checkLoginPage(cy);",
+              "err": {},
+              "uuid": "46363213-e1d3-4cd6-bd62-9a58fa122261",
+              "parentUUID": "579a6c1a-7509-4602-b5e2-4e6b910c92f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC - Room Navigation",
+              "fullTitle": "PO - regression test suite TC - Room Navigation",
+              "timedOut": null,
+              "duration": 2479,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.performLogin(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoRoomsPage(cy); //Assertions sker innuti funktionen\nroomsPage.gotoMainPage(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoClientsPage(cy); //assertions sker innuti funktionen\nclientsPage.gotoMainPage(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoBillsPage(cy); //assertions sker innuti funktionen\nbillsPage.gotoMainPage(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoReservationsPage(cy); //assertions sker innuti funktionen\nreservationsPage.gotoMainPage(cy);\nmainPage.CheckMainPage(cy);\nmainPage.performLogout(cy);\nloginPage.checkLoginPage(cy);",
+              "err": {},
+              "uuid": "02151e9a-0a76-41a9-92dd-170d8c4a9123",
+              "parentUUID": "579a6c1a-7509-4602-b5e2-4e6b910c92f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC - Edit room price error message",
+              "fullTitle": "PO - regression test suite TC - Edit room price error message",
+              "timedOut": null,
+              "duration": 2185,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.performLogin(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoRoomsPage(cy); //Assertions sker innuti funktionen\nroomsPage.gotoeditFirstRoom(cy); //Assertions sker innuti funktionen\nroomsPage.changePriceAndSave(cy, '0'); //Assertion sker innuti. oavsett om man sätter in 0 eller en valid siffra\nmainPage.performLogout(cy);\nloginPage.checkLoginPage(cy);",
+              "err": {},
+              "uuid": "63f4bcc4-6d3f-459b-af3f-50d0315fd05a",
+              "parentUUID": "579a6c1a-7509-4602-b5e2-4e6b910c92f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC - Edit room price happy path",
+              "fullTitle": "PO - regression test suite TC - Edit room price happy path",
+              "timedOut": null,
+              "duration": 2245,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.performLogin(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoRoomsPage(cy); //Assertions sker innuti funktionen\nroomsPage.gotoeditFirstRoom(cy); //Assertions sker innuti funktionen\nroomsPage.changePriceAndSave(cy, '350'); //Assertion sker innuti. oavsett om man sätter in 0 eller en valid siffra\nmainPage.performLogout(cy);\nloginPage.checkLoginPage(cy);",
+              "err": {},
+              "uuid": "538d0a51-d397-427f-ad74-bb7f0c747b04",
+              "parentUUID": "579a6c1a-7509-4602-b5e2-4e6b910c92f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC - Edit roomnumber and floor",
+              "fullTitle": "PO - regression test suite TC - Edit roomnumber and floor",
+              "timedOut": null,
+              "duration": 2437,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.performLogin(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoRoomsPage(cy); //Assertions sker innuti funktionen\nroomsPage.gotoeditFirstRoom(cy); //Assertions sker innuti funktionen\nroomsPage.changeRoomAndFloor(cy, '15', '1536'); //Assertion sker innuti. oavsett parameter\nmainPage.performLogout(cy);\nloginPage.checkLoginPage(cy);",
+              "err": {},
+              "uuid": "93540a17-34f9-4e67-b5d2-4cd85cc4bd2f",
+              "parentUUID": "579a6c1a-7509-4602-b5e2-4e6b910c92f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC - Create new client",
+              "fullTitle": "PO - regression test suite TC - Create new client",
+              "timedOut": null,
+              "duration": 2941,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.performLogin(cy);\nmainPage.CheckMainPage(cy);\nmainPage.gotoClientsPage(cy); //assertions sker innuti funktionen\nclientsPage.createNewClient(cy, 'Abode Chikh', 'Abode.chikh@hotmail.com', '0736526336'); //Assertions sker innuti oavsett inmattning i parameterna.\nmainPage.performLogout(cy);\nloginPage.checkLoginPage(cy);",
+              "err": {},
+              "uuid": "0bb34d9e-610b-4d28-ba01-fc0c89951574",
+              "parentUUID": "579a6c1a-7509-4602-b5e2-4e6b910c92f2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "46363213-e1d3-4cd6-bd62-9a58fa122261",
+            "02151e9a-0a76-41a9-92dd-170d8c4a9123",
+            "63f4bcc4-6d3f-459b-af3f-50d0315fd05a",
+            "538d0a51-d397-427f-ad74-bb7f0c747b04",
+            "93540a17-34f9-4e67-b5d2-4cd85cc4bd2f",
+            "0bb34d9e-610b-4d28-ba01-fc0c89951574"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14195,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {},
+      "version": "5.1.0"
+    }
+  }
+}
