@@ -3,31 +3,30 @@
 import * as targets from '../target/targets'
 
 //Element
-const title = 'Testers Hotel'
+const titleLoginPage = 'Testers Hotel'
 const usrnameTxtField = ':nth-child(1) > input'
 const pwdTxtField = ':nth-child(2) > input'
-const loginInBtn = '.btn'
+const loginBtn = '.btn'
+
 
 //Action
 
 
-function checkLoginPageTitle(cy) {
-    cy.title().should('eq', 'Testers Hotel')
+function checkLoginPage(cy) {
+    cy.title().should('eq', titleLoginPage)
+    cy.contains('Login')
     
 }
 
-function performLogIn(cy){
-    cy.contains('Login')
+function performLogin(cy){
     cy.get(usrnameTxtField).type(targets.userName)
     cy.get(pwdTxtField).type(targets.password)
-    cy.get(loginInBtn).click()
-    cy.contains('Tester Hotel Overview')
-
+    cy.get(loginBtn).click()
 }
 
-
-module.exports
+//export
+module.exports =
 {
-        checkLoginPageTitle;
-        performLogIn
+    checkLoginPage,
+        performLogin
 }
